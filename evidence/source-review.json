@@ -1,0 +1,169 @@
+{
+  "all_new_runtime_tests_dependency_specs_package_ci_docs_notices_read": true,
+  "full_read_file_count": 20,
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "7d3a0ea4421b6f58c5349a25c52b19a254d0a06b6cd48dcbe25a87751fe2bd9b",
+      "bytes": 60,
+      "lines": 6,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "383ec3fc20436d2aa64659aff393409676674a7e94cab2ae26b93961864cba56",
+      "bytes": 1213,
+      "lines": 28,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "c2883872f175f275d89e6da99f174ccf85d8463f4b6a1c97f98e9b0e0c451f40",
+      "bytes": 889,
+      "lines": 26,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "MANIFEST.in",
+      "sha256": "2147978ccffe6de0d20d79a9e2890ffc47312989c9b20cc2536ad12f20cce9b9",
+      "bytes": 267,
+      "lines": 6,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "README.md",
+      "sha256": "a05caf09435253e2b75362329dda0d9c9b8c9f019985096b23bdede7db630c57",
+      "bytes": 8106,
+      "lines": 137,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "ORIGIN.md",
+      "sha256": "d33465b7f1e44cd33d54a99917a8012f1bad4cbfd029111321f8215d952c269a",
+      "bytes": 3140,
+      "lines": 44,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "DEFENSIVE_SCOPE.md",
+      "sha256": "0a0c0d67f4cfcb41b4dd960021fbf65945bd31b15a479345d77f82fdaf177551",
+      "bytes": 1242,
+      "lines": 19,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "VALIDATION.md",
+      "sha256": "d6d8592c026f058d00ea7fd38de87df299cca8e2413037900457925dc95087ee",
+      "bytes": 2473,
+      "lines": 37,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "a785e18582ed4cc578f3d8f663b4f3e90cbbe15cdd039d04fcd9264364fb3108",
+      "bytes": 1091,
+      "lines": 21,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "31bae0cdb44e3232511b97c3b10fce192aae428ad7c23e1b9ff2ab216770c08c",
+      "bytes": 987,
+      "lines": 17,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "requirements-exact.txt",
+      "sha256": "15b1a790b2d6dd01308eab919696adddb5bc09f1f25467ba364111005356da39",
+      "bytes": 179,
+      "lines": 7,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "licenses/C2SP-wycheproof-Apache-2.0.txt",
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+      "bytes": 11357,
+      "lines": 202,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "licenses/trailofbits-wycheproof-php-Apache-2.0.txt",
+      "sha256": "59142b947fbd007c29da2d84bf2de6304ad1ecff6cdd4f0a798a0fa40b5bc9d4",
+      "bytes": 11221,
+      "lines": 200,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "tests/test_bench.py",
+      "sha256": "dc1843bf8cec5522b261331d1ddc0f02f97adcdb704df8eb2e88ba528f388711",
+      "bytes": 21890,
+      "lines": 353,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "src/crypto_regression_bench/__init__.py",
+      "sha256": "dc65c1fe95ef993bb129f5788fa2dfd824e3c0cb966e1c0dff1f7134b212a10a",
+      "bytes": 198,
+      "lines": 5,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "src/crypto_regression_bench/__main__.py",
+      "sha256": "79ee6f134c5c5193377cf9b189cbdcc3e2095e49ba9cec310114441c15a917c4",
+      "bytes": 47,
+      "lines": 2,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "src/crypto_regression_bench/adapter.py",
+      "sha256": "aad5e896cfc2ed175fd4e9d7a407cec6aa20dbb1fa5fd73ad04667507d47ec05",
+      "bytes": 2590,
+      "lines": 64,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "src/crypto_regression_bench/cli.py",
+      "sha256": "9fabdc2c44243a7918562e4956b1d2c5a6ca1cb04f4e37a191a0d58078862e73",
+      "bytes": 695,
+      "lines": 14,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "src/crypto_regression_bench/runner.py",
+      "sha256": "b12d3396aa8ee91e7aa7a79fe6fed4257713eb0d308c5522c28d1cdcd0f80ac3",
+      "bytes": 8943,
+      "lines": 154,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "src/crypto_regression_bench/schema.py",
+      "sha256": "ed17805dfff094a6bfcf62551ccfc576db0d3d4285bb2f358044fa62f97f18ac",
+      "bytes": 8747,
+      "lines": 226,
+      "review": "FULL_SOURCE_READ"
+    }
+  ],
+  "immutable_corpus_file": {
+    "fixed_remote_path": "testvectors_v1/aes_gcm_test.json",
+    "sha256": "985e5ecc172e181eaf49e89508b9470dcf478002eb7e8559c707eb42dc97dfe7",
+    "git_blob": "223f53cad33d78013ed635d94889836c036e1d58",
+    "git_tree_match": true,
+    "bytes": 213177,
+    "review": "FULL_316_CASES_SCHEMA_AND_EXECUTION_ACCOUNTED; NOT_MANUAL_CRYPTO_REDERIVATION"
+  },
+  "findings_fixed": [
+    "acceptable authentication rejection separate from accepted incorrect output",
+    "constructor ValueError cannot masquerade as invalid zero-IV rejection",
+    "observation type/category/budget validation and unknown operation count",
+    "strict local corpus/schema/flags provenance and OPEN propagation",
+    "instrumented whole corpus actual decrypt/encrypt count"
+  ],
+  "build_dependency_versions": {
+    "build": "1.3.0",
+    "setuptools": "80.9.0",
+    "wheel": "0.45.1"
+  },
+  "build_and_stdlib_full_source_audit": false,
+  "ci_definition_read": true,
+  "hosted_ci_run": false
+}

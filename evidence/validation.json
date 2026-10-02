@@ -1,0 +1,180 @@
+{
+  "date": "2026-10-02",
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "platform": "macOS-26.7-arm64-arm-64bit-Mach-O",
+  "source_tests": {
+    "count": 43,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "PASS"
+  },
+  "full_corpus": {
+    "fixed_commit": "3fa63dd0344abb611f1fb1d77e119938603ea230",
+    "sha256": "985e5ecc172e181eaf49e89508b9470dcf478002eb7e8559c707eb42dc97dfe7",
+    "counts": {
+      "groups": 45,
+      "cases": 316,
+      "operations": 491
+    },
+    "expected_results": {
+      "valid": {
+        "total": 229,
+        "matched": 202,
+        "mismatched": 0,
+        "accepted": 0,
+        "rejected": 0,
+        "skipped": 27,
+        "error": 0
+      },
+      "invalid": {
+        "total": 87,
+        "matched": 87,
+        "mismatched": 0,
+        "accepted": 0,
+        "rejected": 0,
+        "skipped": 0,
+        "error": 0
+      },
+      "acceptable": {
+        "total": 0,
+        "matched": 0,
+        "mismatched": 0,
+        "accepted": 0,
+        "rejected": 0,
+        "skipped": 0,
+        "error": 0
+      }
+    },
+    "execution_results": {
+      "matched": 289,
+      "mismatched": 0,
+      "acceptable": 0,
+      "skipped": 27,
+      "error": 0
+    },
+    "report_status": "OPEN",
+    "all_tcIds_1_to_316": true,
+    "instrumented_decrypt_attempts": 289,
+    "instrumented_encrypt_attempts": 202,
+    "corpus_acceptable_cases": 0,
+    "synthetic_acceptable_counterexamples": "PASS"
+  },
+  "independent_installed_tests": {
+    "count": 43,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "PASS"
+  },
+  "consumer_cli": {
+    "independent_install": "fresh environment offline --no-index local pinned dependency wheels",
+    "PYTHONPATH": "UNSET",
+    "cwd_outside_source": true,
+    "default_full_corpus_counts": {
+      "groups": 45,
+      "cases": 316,
+      "operations": 491
+    },
+    "default_full_corpus_execution": {
+      "matched": 289,
+      "mismatched": 0,
+      "acceptable": 0,
+      "skipped": 27,
+      "error": 0
+    },
+    "default_full_corpus_status": "OPEN",
+    "library_identity": {
+      "adapter": "cryptography.AESGCM",
+      "required_version": "47.0.0",
+      "status": "READY",
+      "actual_version": "47.0.0",
+      "openssl_backend": "OpenSSL 4.0.0 14 Apr 2026",
+      "python_version": "3.14.6",
+      "platform": "darwin"
+    },
+    "module_version_help_cli": "PASS",
+    "URL_stdin_archive_directory_inputs": "OPEN_NO_CRYPTO_CALLS",
+    "legacy_flags": "REJECTED",
+    "cli_cases": [
+      {
+        "case": "exact_copy",
+        "exit": 2,
+        "status": "OPEN",
+        "snapshot_sha256": "985e5ecc172e181eaf49e89508b9470dcf478002eb7e8559c707eb42dc97dfe7",
+        "input_unchanged": true
+      },
+      {
+        "case": "valid",
+        "exit": 2,
+        "status": "OPEN",
+        "snapshot_sha256": "a1835e588eb484a79e99635c061810f00be371103adc7af982528694094d7e35",
+        "input_unchanged": true
+      },
+      {
+        "case": "badtag_invalid",
+        "exit": 2,
+        "status": "OPEN",
+        "snapshot_sha256": "2b06b8104730be0b709a18993904a05bf1267407c12e8e0852eba465672ccf51",
+        "input_unchanged": true
+      },
+      {
+        "case": "tampered_valid",
+        "exit": 1,
+        "status": "FAIL",
+        "snapshot_sha256": "aef82072d6ba7cd547056347ddc008ab715bd698a6f1e61dba8ba24c537a8f79",
+        "input_unchanged": true
+      },
+      {
+        "case": "acceptable_accept",
+        "exit": 2,
+        "status": "OPEN",
+        "snapshot_sha256": "df3425f891cb1cfcf265afe836784799e90987ff88ea08027ba113502ec6dba2",
+        "input_unchanged": true
+      },
+      {
+        "case": "acceptable_reject",
+        "exit": 2,
+        "status": "OPEN",
+        "snapshot_sha256": "9b62ff7b611737ece94e7428d4ccb0a04d4daad499a0054e234770e137a54088",
+        "input_unchanged": true
+      },
+      {
+        "case": "unsupported",
+        "exit": 2,
+        "status": "OPEN",
+        "snapshot_sha256": "8644c4b7e8916d03c9702a61119d91fae7f6f9c4d4fb2f5c5ef64b484d7a0a3b",
+        "input_unchanged": true
+      },
+      {
+        "case": "schema",
+        "exit": 2,
+        "status": "OPEN",
+        "snapshot_sha256": "c3a314a88299e87d5fbb20af4e8748ddde5baba0d9e013220ac0d4345539e1fe",
+        "input_unchanged": true
+      },
+      {
+        "case": "unknownflag",
+        "exit": 2,
+        "status": "OPEN",
+        "snapshot_sha256": "5908f8ef100cfbb2b7a6d1c4b15201f9a261798be88fa73e09839db9ff63d596",
+        "input_unchanged": true
+      },
+      {
+        "case": "truncated",
+        "exit": 2,
+        "status": "OPEN",
+        "snapshot_sha256": "021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96",
+        "input_unchanged": true
+      }
+    ]
+  },
+  "source_package_identity": {
+    "all_runtime_source_installed_and_wheel_exact_identity": true,
+    "unchanged_full_corpus_identity": true,
+    "three_complete_license_texts_and_notice_identity": true,
+    "sdist_all_20_reviewed_files_corpus_and_evidence_identity": true
+  },
+  "hosted_ci": "NOT_RUN",
+  "application_eligibility": "OPEN"
+}

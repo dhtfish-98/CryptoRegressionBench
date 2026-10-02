@@ -1,0 +1,17 @@
+CryptoRegressionBench new code: Copyright 2026 CryptoRegressionBench contributors.
+Independently written with OpenAI Codex assistance; new code is MIT.
+
+Complete unchanged AES-GCM synthetic regression corpus:
+C2SP/wycheproof, commit 3fa63dd0344abb611f1fb1d77e119938603ea230.
+Project Wycheproof was originally developed by Google and is community maintained
+under C2SP. Data is distributed under its unchanged Apache-2.0 LICENSE.
+No applicant authorship of these published vectors is claimed.
+
+Selected source/rule reference only:
+trailofbits/wycheproof-php, commit 86a57669e04a152dbc331fffe0362f3dba7a32f9.
+Copyright 2025 Trail of Bits, Inc.; Apache-2.0 original LICENSE retained unchanged.
+The PHP runtime is not copied, imported or distributed.
+
+External runtime dependency cryptography 47.0.0 (pyca), cffi 2.1.1 and pycparser 3.0
+are installed separately and retain their own distributed licenses/notices.
+This project does not distribute or relicense their binaries/implementations.

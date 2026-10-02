@@ -1,0 +1,173 @@
+{
+  "reference_repo": "trailofbits/wycheproof-php",
+  "fixed_commit": "86a57669e04a152dbc331fffe0362f3dba7a32f9",
+  "selected_files_full_read": [
+    {
+      "path": "src/TestVectorLoader.php",
+      "sha256": "84b86763ba3c573cd50ff53baabf7b003b0497eead95f0fc1b98c31b8049913f",
+      "bytes": 3465,
+      "lines": 122,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "src/Provider/GenericProvider.php",
+      "sha256": "a89c795c6dd6971c95b92069bd21fca90c61856a90c4ecebfe4dea67146898e9",
+      "bytes": 1814,
+      "lines": 63,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "src/Provider/AeadProvider.php",
+      "sha256": "bfd778d21bafbc3f02c7085eb3f83012c2c5b758b8c2411d6e3914a0c7e455ef",
+      "bytes": 2702,
+      "lines": 98,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "src/Traits/AeadTestVectors.php",
+      "sha256": "b734f73e7d22527c9a48f1216b22a91c16c92d177201026a15cf8d7ad508534a",
+      "bytes": 1693,
+      "lines": 63,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "src/TestResult.php",
+      "sha256": "c1a2048c90ec8e131d7759ec5863d655ba505c7e890c2af19dd0c149b030cb2f",
+      "bytes": 1089,
+      "lines": 41,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "src/Wycheproof.php",
+      "sha256": "c0fab316ee3cd888355ba35e39d5657a3a800266c6a048724bc1651baf82e0ff",
+      "bytes": 849,
+      "lines": 34,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "src/WycheproofException.php",
+      "sha256": "02e4ed503c05dd058a445dcb138fec32109a2fa2a8b8b6c1510c708bc7388ca3",
+      "bytes": 104,
+      "lines": 7,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "composer.json",
+      "sha256": "5974e75111bd2c20fb20ab8c5d2e8731f7f4e0b5c01234b2b4a9d90ad42e4a3b",
+      "bytes": 624,
+      "lines": 24,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "README.md",
+      "sha256": "a1eaa8cc9780f07255696e5342a0395606083094d9fe0cda6292e89a996b62e9",
+      "bytes": 5944,
+      "lines": 165,
+      "review": "FULL_SOURCE_READ"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "59142b947fbd007c29da2d84bf2de6304ad1ecff6cdd4f0a798a0fa40b5bc9d4",
+      "bytes": 11221,
+      "lines": 200,
+      "review": "FULL_SOURCE_READ"
+    }
+  ],
+  "full_repository_review": false,
+  "excluded": [
+    "other algorithm providers/traits",
+    "upstream PHPUnit tests/build/CI",
+    "full third-party implementation audit"
+  ],
+  "runtime_reference_paths_removed": [
+    "upward vendor discovery/cache",
+    "composer dev-main update expectation",
+    "input comments/values in labels/reports",
+    "PHP runtime dependency"
+  ],
+  "corpus": {
+    "repo": "C2SP/wycheproof",
+    "fixed_commit": "3fa63dd0344abb611f1fb1d77e119938603ea230",
+    "tree_truncated": false,
+    "NOTICE_file_present": false,
+    "selected_official_files": [
+      {
+        "fixed_remote_path": "testvectors_v1/aes_gcm_test.json",
+        "sha256": "985e5ecc172e181eaf49e89508b9470dcf478002eb7e8559c707eb42dc97dfe7",
+        "git_blob": "223f53cad33d78013ed635d94889836c036e1d58",
+        "git_tree_match": true,
+        "bytes": 213177,
+        "review": "FULL_316_CASES_SCHEMA_AND_EXECUTION_ACCOUNTED; NOT_MANUAL_CRYPTO_REDERIVATION"
+      },
+      {
+        "fixed_remote_path": "LICENSE",
+        "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+        "git_blob": "7a4a3ea2424c09fbe48d455aed1eaa94d9124835",
+        "git_tree_match": true,
+        "bytes": 11357,
+        "review": "FULL_LICENSE_READ"
+      },
+      {
+        "fixed_remote_path": "schemas/aead_test_schema_v1.json",
+        "sha256": "6c530fa1dc0376d3d1f826112383959a791d169ed31012ead30625b33e829a62",
+        "git_blob": "0bdfd63dcc740a700dbef6e64c820d768175180e",
+        "git_tree_match": true,
+        "bytes": 3353,
+        "review": "SCHEMA_FULL_READ"
+      },
+      {
+        "fixed_remote_path": "schemas/common.json",
+        "sha256": "d4944d217b04451aab6853c2772c966297543a2791277d32a9b43131d59e0b7f",
+        "git_blob": "0c0778028dae9a3d7eecfe5a96c4d6dc1f3b54d2",
+        "git_tree_match": true,
+        "bytes": 1547,
+        "review": "SCHEMA_FULL_READ"
+      }
+    ]
+  },
+  "dependency_review": {
+    "cryptography_version": "47.0.0",
+    "official_source_url": "https://raw.githubusercontent.com/pyca/cryptography/47.0.0/src/rust/src/backend/aead.rs",
+    "official_source_sha256": "710ff8ad562b67a6d189828eb0cb34f5433e782edc12e937814a9c15c57a2ec0",
+    "selected_full_read_ranges": [
+      [
+        629,
+        839
+      ]
+    ],
+    "installed_python_aead_wrapper_full_read": true,
+    "full_dependency_implementation_review": false,
+    "dependency_wheel_notices_full_read": [
+      {
+        "wheel": "cffi-2.1.1-cp314-cp314-macosx_11_0_arm64.whl",
+        "notice_path": "cffi-2.1.1.dist-info/licenses/LICENSE",
+        "sha256": "5ba24ddc57067f9249add644c3afc41a5d6dc37e23433ef759d95df370b0af63",
+        "bytes": 1123
+      },
+      {
+        "wheel": "cryptography-47.0.0-cp311-abi3-macosx_10_9_universal2.whl",
+        "notice_path": "cryptography-47.0.0.dist-info/licenses/LICENSE",
+        "sha256": "3e0c7c091a948b82533ba98fd7cbb40432d6f1a9acbf85f5922d2f99a93ae6bb",
+        "bytes": 197
+      },
+      {
+        "wheel": "cryptography-47.0.0-cp311-abi3-macosx_10_9_universal2.whl",
+        "notice_path": "cryptography-47.0.0.dist-info/licenses/LICENSE.APACHE",
+        "sha256": "aac73b3148f6d1d7111dbca32099f68d26c644c6813ae1e4f05f6579aa2663fe",
+        "bytes": 11360
+      },
+      {
+        "wheel": "cryptography-47.0.0-cp311-abi3-macosx_10_9_universal2.whl",
+        "notice_path": "cryptography-47.0.0.dist-info/licenses/LICENSE.BSD",
+        "sha256": "602c4c7482de6479dd2e9793cda275e5e63d773dacd1eca689232ab7008fb4fb",
+        "bytes": 1532
+      },
+      {
+        "wheel": "pycparser-3.0-py3-none-any.whl",
+        "notice_path": "pycparser-3.0.dist-info/licenses/LICENSE",
+        "sha256": "0c846399369ea76ddd7b5c44fe6d16497415fcf015f5cbb508c24bf98b81c5b1",
+        "bytes": 1543
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools==80.9.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crypto-regression-bench"
+version = "0.1.0"
+description = "Offline real-library AES-GCM regression on fixed complete Wycheproof v1 corpus"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT AND Apache-2.0"
+license-files = ["LICENSE", "licenses/*.txt"]
+authors = [{name = "CryptoRegressionBench contributors (AI-assisted implementation)"}]
+dependencies = ["cryptography==47.0.0", "cffi==2.1.1", "pycparser==3.0"]
+
+[project.scripts]
+crypto-regression-bench = "crypto_regression_bench.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+crypto_regression_bench = ["data/aes_gcm_test.json"]
+
+[tool.setuptools.data-files]
+"share/crypto-regression-bench" = ["ORIGIN.md", "DEFENSIVE_SCOPE.md", "VALIDATION.md", "NOTICE"]
