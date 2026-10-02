@@ -1,5 +1,21 @@
 # Local validation evidence
 
+## Version 0.1.1 omission review, 2026-10-03 (Asia/Tokyo)
+
+The review reproduced raw caller-argument disclosure by argparse and an
+unhandled UnicodeEncodeError for an unencodable local path. Both now produce
+fixed private OPEN JSON with no crypto adapter initialization or execution.
+The 45 source and fresh offline installed tests pass, including new argument,
+path and no-execution regressions. The unchanged complete official corpus still
+accounts for all 316 cases, 491 actual attempts, 27 skips and zero mismatches
+or errors. Its OPEN coverage and the permanent external claims are unchanged.
+
+Source/wheel/installed module and corpus bytes, wheel RECORD, exact metadata,
+full retained notices and sdist sources are checked. Matching hosted CI and
+publication for this revision require separate evidence after the final commit.
+
+## Original version 0.1.0 local observations
+
 Date: 2026-10-02, Asia/Tokyo. The acceptance-gate JSON fixes the official C2SP 40hex
 commit, full vector and license/schema hashes, cryptography/transitive versions and
 local wheel hashes before new runtime code. The corpus was not edited/subselected.

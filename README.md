@@ -28,7 +28,11 @@ network, subprocess, credential validation or report/config writes. Downloading
 fixed public research/dependency artifacts was an engineering preparation step;
 the installed runtime makes no network calls and executes no input code.
 
-CLI emits deterministic JSON on stdout. Exit 0 PASS, 1 FAIL for a demonstrated
+CLI emits deterministic JSON on stdout, including fixed private argument errors.
+Invalid arguments return OPEN/exit 2 without echoing caller values or initializing
+the crypto adapter; explicit help/version remain informational text. Unencodable
+local path values also return a fixed OPEN diagnostic.
+Exit 0 PASS, 1 FAIL for a demonstrated
 expected-result/output mismatch, 2 OPEN for incomplete/unknown review. A FAIL takes
 priority over an OPEN. An edited local corpus can run but retains unverified origin
 and OPEN even when its cases match; a byte-for-byte local copy of the fixed corpus

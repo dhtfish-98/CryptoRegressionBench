@@ -18,7 +18,7 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "c2883872f175f275d89e6da99f174ccf85d8463f4b6a1c97f98e9b0e0c451f40",
+      "sha256": "d82bb18ada00123ee8580f02d05426441ca7fef5abff07806949185073df1bd9",
       "bytes": 889,
       "lines": 26,
       "review": "FULL_SOURCE_READ"
@@ -32,9 +32,9 @@
     },
     {
       "path": "README.md",
-      "sha256": "a05caf09435253e2b75362329dda0d9c9b8c9f019985096b23bdede7db630c57",
-      "bytes": 8106,
-      "lines": 137,
+      "sha256": "3df10d4fea3c27bf9624f32e9a542c7a348a578cf1db3f2c779019219e6ac15d",
+      "bytes": 8366,
+      "lines": 141,
       "review": "FULL_SOURCE_READ"
     },
     {
@@ -53,9 +53,9 @@
     },
     {
       "path": "VALIDATION.md",
-      "sha256": "d6d8592c026f058d00ea7fd38de87df299cca8e2413037900457925dc95087ee",
-      "bytes": 2473,
-      "lines": 37,
+      "sha256": "253f9c5751bf81c0f8f528296ac3dfcf03327a1119e2575e5458df923cfd4bb8",
+      "bytes": 3353,
+      "lines": 53,
       "review": "FULL_SOURCE_READ"
     },
     {
@@ -95,14 +95,14 @@
     },
     {
       "path": "tests/test_bench.py",
-      "sha256": "dc1843bf8cec5522b261331d1ddc0f02f97adcdb704df8eb2e88ba528f388711",
-      "bytes": 21890,
-      "lines": 353,
+      "sha256": "fc6d292a71de68161b7407c03c778f857791dcdf7391e0bae17a99240a69e15c",
+      "bytes": 23416,
+      "lines": 376,
       "review": "FULL_SOURCE_READ"
     },
     {
       "path": "src/crypto_regression_bench/__init__.py",
-      "sha256": "dc65c1fe95ef993bb129f5788fa2dfd824e3c0cb966e1c0dff1f7134b212a10a",
+      "sha256": "afa29ebeaaee0ee3e165aa89b7e4356647d53cec66fca81ef976e62026459bc7",
       "bytes": 198,
       "lines": 5,
       "review": "FULL_SOURCE_READ"
@@ -123,16 +123,16 @@
     },
     {
       "path": "src/crypto_regression_bench/cli.py",
-      "sha256": "9fabdc2c44243a7918562e4956b1d2c5a6ca1cb04f4e37a191a0d58078862e73",
-      "bytes": 695,
-      "lines": 14,
+      "sha256": "a4bc834ab591f7685bf045c2e9fbf49e2661eebb4f8cf75370a08dca97a2b0c4",
+      "bytes": 905,
+      "lines": 23,
       "review": "FULL_SOURCE_READ"
     },
     {
       "path": "src/crypto_regression_bench/runner.py",
-      "sha256": "b12d3396aa8ee91e7aa7a79fe6fed4257713eb0d308c5522c28d1cdcd0f80ac3",
-      "bytes": 8943,
-      "lines": 154,
+      "sha256": "e5f804cc2542685abb9a28ff9ea2da8d0f6e8d405c5621ae1607f356cb3b1067",
+      "bytes": 9193,
+      "lines": 162,
       "review": "FULL_SOURCE_READ"
     },
     {
@@ -156,7 +156,9 @@
     "constructor ValueError cannot masquerade as invalid zero-IV rejection",
     "observation type/category/budget validation and unknown operation count",
     "strict local corpus/schema/flags provenance and OPEN propagation",
-    "instrumented whole corpus actual decrypt/encrypt count"
+    "instrumented whole corpus actual decrypt/encrypt count",
+    "private deterministic CLI argument-error JSON without adapter access",
+    "unencodable local path returns sanitized OPEN without raw UnicodeError"
   ],
   "build_dependency_versions": {
     "build": "1.3.0",
@@ -165,5 +167,7 @@
   },
   "build_and_stdlib_full_source_audit": false,
   "ci_definition_read": true,
-  "hosted_ci_run": false
+  "hosted_ci_run": false,
+  "reaudit_date": "2026-10-03 Asia/Tokyo",
+  "version": "0.1.1"
 }

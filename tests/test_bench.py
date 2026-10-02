@@ -346,8 +346,31 @@ class BenchTests(unittest.TestCase):
         d=fixture();d['testGroups'][0]['tests'][0]['tag']=flip(d['testGroups'][0]['tests'][0]['tag']);self.path.write_text(json.dumps(d))
         with mock.patch('sys.stdout',new_callable=io.StringIO):self.assertEqual(main([str(self.path)]),1)
         for flag in ('--download','--update','--plugin','--output','--algorithm','--vector-url'):
-            with mock.patch('sys.stderr',new_callable=io.StringIO),self.assertRaises(SystemExit) as e:main([flag])
-            self.assertEqual(e.exception.code,2)
+            with mock.patch('sys.stdout',new_callable=io.StringIO) as out, mock.patch('sys.stderr',new_callable=io.StringIO) as err:
+                self.assertEqual(main([flag]),2)
+            self.assertEqual(json.loads(out.getvalue())['status'],'OPEN')
+            self.assertEqual(err.getvalue(),'')
+
+    def test_private_cli_argument_errors_have_fixed_json_without_execution(self):
+        for args in [['--private-argument-marker'], ['private-path', 'private-extra'],
+                     ['--output=private-output-path']]:
+            with mock.patch('sys.stdout',new_callable=io.StringIO) as out, mock.patch('sys.stderr',new_callable=io.StringIO) as err, mock.patch('crypto_regression_bench.runner.Adapter',side_effect=AssertionError('must not initialize')):
+                self.assertEqual(main(args),2)
+            report=json.loads(out.getvalue())
+            self.assertEqual(report['status'],'OPEN')
+            self.assertEqual(report['counts']['operations'],0)
+            self.assertEqual(report['diagnostics'][0]['code'],'invalid_arguments')
+            self.assertEqual(report['application_eligibility'],'OPEN')
+            self.assertEqual(err.getvalue(),'')
+            self.assertNotIn('private-',out.getvalue())
+
+    def test_unencodable_local_path_is_private_open(self):
+        with mock.patch('crypto_regression_bench.runner.Adapter',side_effect=AssertionError('must not initialize')):
+            report=run_vectors('\ud800')
+        self.assertEqual(report['status'],'OPEN')
+        self.assertEqual(report['diagnostics'][0]['code'],'input_io_error')
+        self.assertEqual(report['counts']['operations'],0)
+        self.assertFalse(report['schema_complete'])
 
 
 if __name__=='__main__':unittest.main()

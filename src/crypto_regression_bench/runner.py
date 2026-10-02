@@ -40,12 +40,12 @@ def read_local(path, limits):
             if len(data) > limits.input_bytes:
                 raise Problem('input_limit')
             return data
-    except OSError:
+    except (OSError, UnicodeError):
         raise Problem('input_io_error') from None
 
 
 def _base(limits):
-    return {'tool':'CryptoRegressionBench', 'version':'0.1.0', 'status':'OPEN', 'schema_complete':False, 'execution_complete':False, 'detail_complete':True, 'corpus':{'identity':'UNOBSERVED', 'fixed_commit':CORPUS_COMMIT, 'fixed_file':'testvectors_v1/aes_gcm_test.json'}, 'library':{'adapter':'cryptography.AESGCM', 'required_version':PINNED_VERSION, 'status':'UNOBSERVED'}, 'counts':{'groups':0, 'cases':0, 'operations':0}, 'operation_count_complete':True, 'expected_results':{r:{'total':0, 'matched':0, 'mismatched':0, 'accepted':0, 'rejected':0, 'skipped':0, 'error':0} for r in RESULTS}, 'execution_results':{'matched':0, 'mismatched':0, 'acceptable':0, 'skipped':0, 'error':0}, 'cases':[], 'diagnostics':[], 'limits':asdict(limits), 'library_overall_security':'OPEN', 'application_eligibility':'OPEN', 'vulnerability_discovery':'NOT_ESTABLISHED'}
+    return {'tool':'CryptoRegressionBench', 'version':'0.1.1', 'status':'OPEN', 'schema_complete':False, 'execution_complete':False, 'detail_complete':True, 'corpus':{'identity':'UNOBSERVED', 'fixed_commit':CORPUS_COMMIT, 'fixed_file':'testvectors_v1/aes_gcm_test.json'}, 'library':{'adapter':'cryptography.AESGCM', 'required_version':PINNED_VERSION, 'status':'UNOBSERVED'}, 'counts':{'groups':0, 'cases':0, 'operations':0}, 'operation_count_complete':True, 'expected_results':{r:{'total':0, 'matched':0, 'mismatched':0, 'accepted':0, 'rejected':0, 'skipped':0, 'error':0} for r in RESULTS}, 'execution_results':{'matched':0, 'mismatched':0, 'acceptable':0, 'skipped':0, 'error':0}, 'cases':[], 'diagnostics':[], 'limits':asdict(limits), 'library_overall_security':'OPEN', 'application_eligibility':'OPEN', 'vulnerability_discovery':'NOT_ESTABLISHED'}
 
 
 def _diagnostic(report, code, location='$', position=None):
@@ -66,6 +66,14 @@ def _finish(report, limits):
         if not fail:
             report['status'] = 'OPEN'
     return report
+
+
+def argument_report():
+    """Fixed private CLI error, without attempting corpus or library access."""
+    limits = Limits()
+    report = _base(limits)
+    _diagnostic(report, 'invalid_arguments')
+    return _finish(report, limits)
 
 
 def run_vectors(path=None, *, limits=None):
