@@ -7,11 +7,6 @@ Project Wycheproof was originally developed by Google and is community maintaine
 under C2SP. Data is distributed under its unchanged Apache-2.0 LICENSE.
 No applicant authorship of these published vectors is claimed.
 
-Selected source/rule reference only:
-trailofbits/wycheproof-php, commit 86a57669e04a152dbc331fffe0362f3dba7a32f9.
-Copyright 2025 Trail of Bits, Inc.; Apache-2.0 original LICENSE retained unchanged.
-The PHP runtime is not copied, imported or distributed.
-
 External runtime dependency cryptography 47.0.0 (pyca), cffi 2.1.1 and pycparser 3.0
 are installed separately and retain their own distributed licenses/notices.
 This project does not distribute or relicense their binaries/implementations.

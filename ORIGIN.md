@@ -27,10 +27,11 @@ were not manually audited as original research. The published file remains byte-
 byte unchanged. Project Wycheproof was originally developed by Google and is now a
 community project under C2SP. The complete original Apache-2.0 license is retained.
 
-The unchanged Trail of Bits Apache-2.0 license includes Copyright 2025 Trail of Bits,
-Inc. New code's MIT grant does not relicense either source reference or corpus.
-NOTICE provides separate attribution; both Apache texts/new MIT and provenance
-ship in wheel/sdist. External cryptography/cffi/pycparser packages are separately
+Trail of Bits' PHP project is a source/rule reference only; its code is not
+redistributed. The unused reference-only license/copyright copy was removed.
+The unchanged C2SP corpus keeps its original Apache-2.0 grant and provenance,
+separately from the new MIT implementation. Both applicable licenses and data
+provenance ship in wheel/sdist. External cryptography/cffi/pycparser packages are separately
 installed; their own complete distributed notices were inspected in local dependency
 wheels. Those packages are not bundled into/relicensed by this distribution.
 

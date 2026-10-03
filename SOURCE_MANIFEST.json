@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "project": "CryptoRegressionBench",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "dhtfish98",
   "scope": "Current selected implementation and repository files; self manifest excluded to avoid a hash cycle. Upstream source commits remain in ORIGIN/source review records.",
   "files": [
@@ -32,13 +32,13 @@
     },
     {
       "path": "NOTICE",
-      "sha256": "756760d3c90d745d51733d5c7398d95fc361d43e6709b5ff8c8ef8eb690ae115",
-      "bytes": 963
+      "sha256": "1fc205c9e8ae8e361bb28e2147655718e41921fbe0c6ced40e097ab480435998",
+      "bytes": 708
     },
     {
       "path": "ORIGIN.md",
-      "sha256": "756f0a85faf476b3f95e72b18ad39951c691be6d000bc6fae716ffcc8281aa79",
-      "bytes": 3134
+      "sha256": "6b5d6842c877bd77bda048a8a1c9fd361abf1872c276fa92e13a77e416ed8390",
+      "bytes": 3209
     },
     {
       "path": "README.md",
@@ -47,8 +47,8 @@
     },
     {
       "path": "VALIDATION.md",
-      "sha256": "7a351201eb12ecf2897c11015a59cecb3729883d9c54c074c968f9111e4c1a8c",
-      "bytes": 4526
+      "sha256": "38d8f924f24c3181a2ebccc47ba04bd8d34d51620e1fd3a67731448fc357cdbf",
+      "bytes": 5865
     },
     {
       "path": "evidence/acceptance-gate.json",
@@ -81,14 +81,9 @@
       "bytes": 11357
     },
     {
-      "path": "licenses/trailofbits-wycheproof-php-Apache-2.0.txt",
-      "sha256": "59142b947fbd007c29da2d84bf2de6304ad1ecff6cdd4f0a798a0fa40b5bc9d4",
-      "bytes": 11221
-    },
-    {
       "path": "pyproject.toml",
-      "sha256": "5f3dcfe29dcc1922cf0867155973913e9115f08788f9e310262a92b61f3880a0",
-      "bytes": 872
+      "sha256": "f9719039262641728a73cbae7418f7aae9cea84bb967dae11a429f2e40e7c28f",
+      "bytes": 897
     },
     {
       "path": "requirements-exact.txt",
@@ -97,7 +92,7 @@
     },
     {
       "path": "src/crypto_regression_bench/__init__.py",
-      "sha256": "8cd219c2c31d72c05882e5d0b0e7a1f23ae05f004fdf5a7b1e7bf8413d597d54",
+      "sha256": "f99be07b5e85ea2f0e8399863cc040ffc5b08f18f41496d504a69767fbfaba0c",
       "bytes": 198
     },
     {
@@ -122,7 +117,7 @@
     },
     {
       "path": "src/crypto_regression_bench/runner.py",
-      "sha256": "18eeecbcd8809d03c462e4a347d42a6e90fc5b89866d932af7db0bb34cfd6624",
+      "sha256": "e8a2c0ca854ccf177a04813f1120889aebf81a167fb08a32ef351068b67d699b",
       "bytes": 9351
     },
     {
@@ -135,5 +130,6 @@
       "sha256": "070c3dfd6dc35198a16668af4239000c65c9ee363b0731853cd5babbca396de5",
       "bytes": 25206
     }
-  ]
+  ],
+  "license_cleanup": "Only approved reference-only copies removed; applicable data/code/terms and own LICENSE preserved."
 }
