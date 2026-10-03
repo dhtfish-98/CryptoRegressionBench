@@ -4,13 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "crypto-regression-bench"
-version = "0.1.1"
+version = "0.1.2"
 description = "Offline real-library AES-GCM regression on fixed complete Wycheproof v1 corpus"
 readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT AND Apache-2.0"
 license-files = ["LICENSE", "licenses/*.txt"]
-authors = [{name = "CryptoRegressionBench contributors (AI-assisted implementation)"}]
+authors = [{name = "dhtfish98"}]
+maintainers = [{name = "dhtfish98"}]
 dependencies = ["cryptography==47.0.0", "cffi==2.1.1", "pycparser==3.0"]
 
 [project.scripts]

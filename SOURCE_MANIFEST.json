@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "project": "CryptoRegressionBench",
+  "version": "0.1.2",
+  "author": "dhtfish98",
+  "scope": "Current selected implementation and repository files; self manifest excluded to avoid a hash cycle. Upstream source commits remain in ORIGIN/source review records.",
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "383ec3fc20436d2aa64659aff393409676674a7e94cab2ae26b93961864cba56",
+      "bytes": 1213
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "7d3a0ea4421b6f58c5349a25c52b19a254d0a06b6cd48dcbe25a87751fe2bd9b",
+      "bytes": 60
+    },
+    {
+      "path": "DEFENSIVE_SCOPE.md",
+      "sha256": "0a0c0d67f4cfcb41b4dd960021fbf65945bd31b15a479345d77f82fdaf177551",
+      "bytes": 1242
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "de926d6c22d9e061af6158b0f23146ce036bfb2a562f2f406acec2dc4bd8b298",
+      "bytes": 1066
+    },
+    {
+      "path": "MANIFEST.in",
+      "sha256": "55a2e652da13bb4896a81d1d9f9abb984d41b0b3d7a496ac8d2ccb05da210322",
+      "bytes": 297
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "756760d3c90d745d51733d5c7398d95fc361d43e6709b5ff8c8ef8eb690ae115",
+      "bytes": 963
+    },
+    {
+      "path": "ORIGIN.md",
+      "sha256": "756f0a85faf476b3f95e72b18ad39951c691be6d000bc6fae716ffcc8281aa79",
+      "bytes": 3134
+    },
+    {
+      "path": "README.md",
+      "sha256": "bdc516178223d527eaf6968ff86f1b5235fa9aca4b965dcfb4d623b25e8b3ca2",
+      "bytes": 8597
+    },
+    {
+      "path": "VALIDATION.md",
+      "sha256": "7a351201eb12ecf2897c11015a59cecb3729883d9c54c074c968f9111e4c1a8c",
+      "bytes": 4526
+    },
+    {
+      "path": "evidence/acceptance-gate.json",
+      "sha256": "e7955857fd7918425a2d66594dbfcca6e817bf7892d812a9762677a43d64e44f",
+      "bytes": 2013
+    },
+    {
+      "path": "evidence/corpus-run.json",
+      "sha256": "bc4a17fbd8ca3c49a4a56504911ff1741ca1d01bb57da1cd15048977ea80e2c0",
+      "bytes": 97918
+    },
+    {
+      "path": "evidence/source-review.json",
+      "sha256": "b5592601cf97d61ad2e9932fd6c4a9df31b6560737f8c5a6a484ebb1863263bd",
+      "bytes": 5609
+    },
+    {
+      "path": "evidence/upstream-review.json",
+      "sha256": "090cf3d08b38f132c9d7f96dbdc0891170d06994c2ce7c4dd92a5d7fc24c90f6",
+      "bytes": 6033
+    },
+    {
+      "path": "evidence/validation.json",
+      "sha256": "5d5dac0651f3725a1e2f7c5831f261e89678dd16cc91cfbcd603321c26af3d93",
+      "bytes": 5102
+    },
+    {
+      "path": "licenses/C2SP-wycheproof-Apache-2.0.txt",
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+      "bytes": 11357
+    },
+    {
+      "path": "licenses/trailofbits-wycheproof-php-Apache-2.0.txt",
+      "sha256": "59142b947fbd007c29da2d84bf2de6304ad1ecff6cdd4f0a798a0fa40b5bc9d4",
+      "bytes": 11221
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "5f3dcfe29dcc1922cf0867155973913e9115f08788f9e310262a92b61f3880a0",
+      "bytes": 872
+    },
+    {
+      "path": "requirements-exact.txt",
+      "sha256": "15b1a790b2d6dd01308eab919696adddb5bc09f1f25467ba364111005356da39",
+      "bytes": 179
+    },
+    {
+      "path": "src/crypto_regression_bench/__init__.py",
+      "sha256": "8cd219c2c31d72c05882e5d0b0e7a1f23ae05f004fdf5a7b1e7bf8413d597d54",
+      "bytes": 198
+    },
+    {
+      "path": "src/crypto_regression_bench/__main__.py",
+      "sha256": "79ee6f134c5c5193377cf9b189cbdcc3e2095e49ba9cec310114441c15a917c4",
+      "bytes": 47
+    },
+    {
+      "path": "src/crypto_regression_bench/adapter.py",
+      "sha256": "aad5e896cfc2ed175fd4e9d7a407cec6aa20dbb1fa5fd73ad04667507d47ec05",
+      "bytes": 2590
+    },
+    {
+      "path": "src/crypto_regression_bench/cli.py",
+      "sha256": "a4bc834ab591f7685bf045c2e9fbf49e2661eebb4f8cf75370a08dca97a2b0c4",
+      "bytes": 905
+    },
+    {
+      "path": "src/crypto_regression_bench/data/aes_gcm_test.json",
+      "sha256": "985e5ecc172e181eaf49e89508b9470dcf478002eb7e8559c707eb42dc97dfe7",
+      "bytes": 213177
+    },
+    {
+      "path": "src/crypto_regression_bench/runner.py",
+      "sha256": "18eeecbcd8809d03c462e4a347d42a6e90fc5b89866d932af7db0bb34cfd6624",
+      "bytes": 9351
+    },
+    {
+      "path": "src/crypto_regression_bench/schema.py",
+      "sha256": "ed17805dfff094a6bfcf62551ccfc576db0d3d4285bb2f358044fa62f97f18ac",
+      "bytes": 8747
+    },
+    {
+      "path": "tests/test_bench.py",
+      "sha256": "070c3dfd6dc35198a16668af4239000c65c9ee363b0731853cd5babbca396de5",
+      "bytes": 25206
+    }
+  ]
+}

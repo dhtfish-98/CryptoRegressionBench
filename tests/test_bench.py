@@ -67,6 +67,35 @@ class BenchTests(unittest.TestCase):
         self.assertEqual(r['counts']['operations'],0)
         return r
 
+    def test_missing_safe_open_flags_never_read_regular_or_symlink(self):
+        self.path.write_bytes(json.dumps(fixture()).encode())
+        link = self.root / 'missing-flags-link'
+        link.symlink_to(self.path)
+        normal = run_vectors(self.path)
+        self.assertTrue(normal['schema_complete'])
+        self.assertEqual(normal['counts']['operations'], 2)
+        self.assertFalse(run_vectors(link)['schema_complete'])
+        for flag in ('O_NOFOLLOW', 'O_NONBLOCK'):
+            for mode in ('missing', 'zero', 'none', 'bool', 'text', 'float'):
+                with self.subTest(flag=flag, mode=mode):
+                    old = getattr(os, flag)
+                    try:
+                        if mode == 'missing':
+                            delattr(os, flag)
+                        else:
+                            setattr(os, flag, {"zero": 0, "none": None, "bool": True, "text": "1", "float": 1.0}[mode])
+                        with mock.patch('crypto_regression_bench.runner.os.open', side_effect=AssertionError('must not open')):
+                            for path in (self.path, link):
+                                report = run_vectors(path)
+                                self.assertEqual(report['status'], 'OPEN')
+                                self.assertEqual(report['diagnostics'][0]['code'], 'safe_open_flags_unavailable')
+                                self.assertEqual(report['counts']['operations'], 0)
+                            with mock.patch('sys.stdout', new_callable=io.StringIO) as output:
+                                self.assertEqual(main([str(self.path)]), 2)
+                            self.assertEqual(json.loads(output.getvalue())['status'], 'OPEN')
+                    finally:
+                        setattr(os, flag, old)
+
     def test_complete_official_corpus_and_each_test_id(self):
         r=run_vectors()
         self.assertEqual(r['corpus']['sha256'],CORPUS_SHA256)

@@ -11,7 +11,7 @@ provide actual crypto operations. Its loader's upward vendor discovery/cache,
 GenericProvider labels/raw metadata and unfixed dev-main vector dependency are
 excluded. No PHP runtime implementation is copied, renamed, imported or shipped.
 
-The newly written runner is AI-assisted with OpenAI Codex. Its contribution is
+New implementation author and maintainer: dhtfish98. Its contribution is
 bounded local snapshot/schema validation, frozen corpus identity, real pinned-library
 adapter calls, plaintext and encryption output comparison, precise authentication
 vs parameter vs adapter-error accounting, complete case ledger, private reproducible

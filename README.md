@@ -1,12 +1,14 @@
 # CryptoRegressionBench
 
+New implementation author and maintainer: dhtfish98.
+
 Offline, bounded AES-GCM regression using **real cryptography 47.0.0 AESGCM
 calls** and one complete fixed C2SP/Wycheproof v1 corpus. It validates the corpus,
 executes supported cases, checks expected plaintext and encryption output, and
 reports every tcId without printing keys, plaintext, ciphertext or raw metadata.
 It never implements AES/GHASH itself or evaluates input as code.
 
-This independently written AI-assisted runner adds actual library execution and
+This independently written runner adds actual library execution and
 fault accounting to the selected PHP Loader/Provider reference. It does not import,
 wrap or mechanically translate that library. [ORIGIN](ORIGIN.md) identifies the
 selected source audit and attribution; [DEFENSIVE_SCOPE](DEFENSIVE_SCOPE.md) limits
@@ -116,9 +118,12 @@ and the first mismatch, marks detail incomplete and adds OPEN. These are data an
 operation budgets; no hard wall-clock interruption of a native crypto call is
 claimed.
 
-Only the final input path component rejects symlinks with O_NOFOLLOW where
-available; parent components use normal OS resolution. Non-regular files/FIFOs are
-rejected without blocking where O_NONBLOCK is available. Snapshot size/time/identity
+Only the final input path component rejects symlinks with required O_NOFOLLOW;
+parent components use normal OS resolution. File input requires positive
+O_NOFOLLOW and O_NONBLOCK OS flags; missing capabilities return controlled OPEN
+before inspecting/opening a file. Non-regular files/FIFOs are rejected without
+blocking. POSIX file behavior is verified on macOS; native Windows behavior is
+not verified. Snapshot size/time/identity
 and full byte length are checked before/after read. Input bytes remain unchanged.
 
 ## Validation

@@ -1,5 +1,5 @@
-CryptoRegressionBench new code: Copyright 2026 CryptoRegressionBench contributors.
-Independently written with OpenAI Codex assistance; new code is MIT.
+CryptoRegressionBench new code: Copyright 2026 dhtfish98.
+New implementation author and maintainer: dhtfish98; new code is MIT.
 
 Complete unchanged AES-GCM synthetic regression corpus:
 C2SP/wycheproof, commit 3fa63dd0344abb611f1fb1d77e119938603ea230.

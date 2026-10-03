@@ -21,10 +21,13 @@ def read_local(path, limits):
         raise Problem('input_path_type') from None
     if type(name) is not str or not name or name in ('-',) or name.startswith('@') or '://' in name or '\x00' in name:
         raise Problem('local_regular_file_required')
+    if any(type(getattr(os, flag, None)) is not int or getattr(os, flag, 0) <= 0
+           for flag in ('O_NOFOLLOW', 'O_NONBLOCK')):
+        raise Problem('safe_open_flags_unavailable')
     try:
         if stat.S_ISLNK(os.lstat(name).st_mode):
             raise Problem('input_symlink')
-        flags = os.O_RDONLY | getattr(os, 'O_NOFOLLOW', 0) | getattr(os, 'O_NONBLOCK', 0)
+        flags = os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK
         fd = os.open(name, flags)
         with os.fdopen(fd, 'rb') as handle:
             before = os.fstat(handle.fileno())
@@ -45,7 +48,7 @@ def read_local(path, limits):
 
 
 def _base(limits):
-    return {'tool':'CryptoRegressionBench', 'version':'0.1.1', 'status':'OPEN', 'schema_complete':False, 'execution_complete':False, 'detail_complete':True, 'corpus':{'identity':'UNOBSERVED', 'fixed_commit':CORPUS_COMMIT, 'fixed_file':'testvectors_v1/aes_gcm_test.json'}, 'library':{'adapter':'cryptography.AESGCM', 'required_version':PINNED_VERSION, 'status':'UNOBSERVED'}, 'counts':{'groups':0, 'cases':0, 'operations':0}, 'operation_count_complete':True, 'expected_results':{r:{'total':0, 'matched':0, 'mismatched':0, 'accepted':0, 'rejected':0, 'skipped':0, 'error':0} for r in RESULTS}, 'execution_results':{'matched':0, 'mismatched':0, 'acceptable':0, 'skipped':0, 'error':0}, 'cases':[], 'diagnostics':[], 'limits':asdict(limits), 'library_overall_security':'OPEN', 'application_eligibility':'OPEN', 'vulnerability_discovery':'NOT_ESTABLISHED'}
+    return {'tool':'CryptoRegressionBench', 'version':'0.1.2', 'status':'OPEN', 'schema_complete':False, 'execution_complete':False, 'detail_complete':True, 'corpus':{'identity':'UNOBSERVED', 'fixed_commit':CORPUS_COMMIT, 'fixed_file':'testvectors_v1/aes_gcm_test.json'}, 'library':{'adapter':'cryptography.AESGCM', 'required_version':PINNED_VERSION, 'status':'UNOBSERVED'}, 'counts':{'groups':0, 'cases':0, 'operations':0}, 'operation_count_complete':True, 'expected_results':{r:{'total':0, 'matched':0, 'mismatched':0, 'accepted':0, 'rejected':0, 'skipped':0, 'error':0} for r in RESULTS}, 'execution_results':{'matched':0, 'mismatched':0, 'acceptable':0, 'skipped':0, 'error':0}, 'cases':[], 'diagnostics':[], 'limits':asdict(limits), 'library_overall_security':'OPEN', 'application_eligibility':'OPEN', 'vulnerability_discovery':'NOT_ESTABLISHED'}
 
 
 def _diagnostic(report, code, location='$', position=None):
