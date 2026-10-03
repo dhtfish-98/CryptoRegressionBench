@@ -1,0 +1,45 @@
+{
+  "schema": "project-build-layout.v1",
+  "project": "CryptoRegressionBench",
+  "author": "dhtfish98",
+  "kind": "python",
+  "base_public_commit": "2b4e4f422b15e7775dd66a67bbfb371180a44c61",
+  "restored_inputs": [
+    {
+      "original": "DEFENSIVE_SCOPE.md",
+      "stored": "项目文档/DEFENSIVE_SCOPE.md",
+      "sha256": "0a0c0d67f4cfcb41b4dd960021fbf65945bd31b15a479345d77f82fdaf177551"
+    },
+    {
+      "original": "LICENSE",
+      "stored": "项目文档/LICENSE",
+      "sha256": "de926d6c22d9e061af6158b0f23146ce036bfb2a562f2f406acec2dc4bd8b298"
+    },
+    {
+      "original": "NOTICE",
+      "stored": "项目文档/NOTICE",
+      "sha256": "1fc205c9e8ae8e361bb28e2147655718e41921fbe0c6ced40e097ab480435998"
+    },
+    {
+      "original": "ORIGIN.md",
+      "stored": "项目文档/ORIGIN.md",
+      "sha256": "6b5d6842c877bd77bda048a8a1c9fd361abf1872c276fa92e13a77e416ed8390"
+    },
+    {
+      "original": "README.md",
+      "stored": "项目文档/README.md",
+      "sha256": "c925a3d50aef27a2000369d59b4dafaef57987621a23d063afaf01e74a23ac03"
+    },
+    {
+      "original": "VALIDATION.md",
+      "stored": "项目文档/VALIDATION.md",
+      "sha256": "38d8f924f24c3181a2ebccc47ba04bd8d34d51620e1fd3a67731448fc357cdbf"
+    },
+    {
+      "original": "licenses/C2SP-wycheproof-Apache-2.0.txt",
+      "stored": "项目文档/licenses/C2SP-wycheproof-Apache-2.0.txt",
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+    }
+  ],
+  "platform_entries": []
+}

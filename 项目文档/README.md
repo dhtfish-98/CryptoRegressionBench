@@ -1,3 +1,5 @@
+> 目录已整理：文档在「项目文档」，构建、缓存与暂存输入在「Build」。从仓库根目录运行 `python3 构建.py --build`；如需使用本文原有源码命令，先运行 `python3 构建.py --stage --ci`，再进入 `Build/源码`。暂存会恢复原输入路径。现有版本和历史验证记录按各自提交理解。
+
 # CryptoRegressionBench
 
 New implementation author and maintainer: dhtfish98.
@@ -10,8 +12,8 @@ It never implements AES/GHASH itself or evaluates input as code.
 
 This independently written runner adds actual library execution and
 fault accounting to the selected PHP Loader/Provider reference. It does not import,
-wrap or mechanically translate that library. [ORIGIN](ORIGIN.md) identifies the
-selected source audit and attribution; [DEFENSIVE_SCOPE](DEFENSIVE_SCOPE.md) limits
+wrap or mechanically translate that library. [ORIGIN](<ORIGIN.md>) identifies the
+selected source audit and attribution; [DEFENSIVE_SCOPE](<DEFENSIVE_SCOPE.md>) limits
 claims. Application eligibility and whole-library security remain **OPEN**.
 
 ## Run
@@ -133,7 +135,7 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 python -m build --no-isolation
 ```
 
-[VALIDATION](VALIDATION.md) and `evidence/` record actual corpus execution, targeted
+[VALIDATION](<VALIDATION.md>) and `evidence/` record actual corpus execution, targeted
 counterexamples, source review, fresh offline installed consumer checks and full
 package/source/license identity. CI defines Python 3.11/3.14 jobs; hosted CI was not
 run here. Only the local interpreter/platform stated in evidence was executed.
